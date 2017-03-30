@@ -22,7 +22,7 @@ module.exports = function ($, config) {
                             // Require only when really needed.
                             // Require calls are memoized anyway.
                             var fs = require('graceful-fs');
-                            var stripBom = require('strip-bom');
+                            var stripBom = require('strip-bom-buf');
                             orderPromise.then(function () {
                                 return new Promise(function(resolve, reject) {
                                     fs.readFile(file.path, function (err, data) {
